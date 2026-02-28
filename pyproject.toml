@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gatewayaivectormemory"
+version = "0.1.1"
+description = "团队级 AI 记忆中枢 — PostgreSQL + pgvector 存储、HTTP Memory Proxy、多人协作知识共享、用户隔离"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "GatewayAIVectorMemory Contributors" }]
+keywords = ["memory", "ai", "llm", "postgresql", "pgvector", "http", "team", "embedding"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "psycopg[binary]>=3.1",
+    "pgvector>=0.3",
+    "uvicorn>=0.30",
+    "fastapi>=0.110",
+    "onnxruntime>=1.16",
+    "tokenizers>=0.15",
+    "huggingface-hub>=0.20",
+    "numpy>=1.24",
+    "jieba>=0.42",
+    "PyJWT>=2.8",
+]
+
+[project.scripts]
+team-run = "gatewayaivectormemory.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/cmsyt/gatewayaivectormemory"
+Repository = "https://github.com/cmsyt/gatewayaivectormemory"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gatewayaivectormemory"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

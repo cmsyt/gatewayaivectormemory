@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "aivectormemory": {
+      "type": "local",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "-m",
+        "aivectormemory",
+        "--project-dir",
+        "/Users/macos/item/gatewayaivectormemory"
+      ],
+      "enabled": true
+    }
+  }
+}
