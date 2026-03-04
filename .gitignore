@@ -2,6 +2,9 @@
 .kiro/
 .opencode/
 .vscode/
+.claude/
+.mcp.json
+CLAUDE.md
 
 # Python
 .venv/
