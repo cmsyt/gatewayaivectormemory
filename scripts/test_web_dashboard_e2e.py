@@ -112,7 +112,7 @@ def main():
     html = resp.read().decode()
     conn.close()
     check("index-200", resp.status == 200)
-    check("index-has-title", "TeamAIVectorMemory" in html)
+    check("index-has-title", "GatewayAIVectorMemory" in html)
     check("index-has-app-js", "app.js" in html)
 
     # ========================================

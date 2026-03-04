@@ -1,7 +1,7 @@
 🌐 简体中文 | [繁體中文](docs/README.zh-TW.md) | [English](docs/README.en.md) | [Español](docs/README.es.md) | [Deutsch](docs/README.de.md) | [Français](docs/README.fr.md) | [日本語](docs/README.ja.md)
 
 <p align="center">
-  <h1 align="center">🧠 TeamAIVectorMemory</h1>
+  <h1 align="center">🧠 GatewayAIVectorMemory</h1>
   <p align="center">
     <strong>给 AI 编程助手装上团队记忆 — PostgreSQL + pgvector 存储 · HTTP Memory Proxy · 多人协作知识共享</strong>
   </p>
@@ -16,7 +16,7 @@
 
 > **你是否也有这样的困扰？** 每开一个新会话，AI 就像换了个人 — 昨天刚教会它的项目规范今天又忘了，踩过的坑还会再踩一遍，开发到一半的进度全部归零。团队里每个人都在重复踩同样的坑，知识无法沉淀，经验无法传承。
 >
-> **TeamAIVectorMemory 是为团队打造的 AI 记忆中枢。** PostgreSQL + pgvector 存储，HTTP Memory Proxy 统一接入，团队踩坑经验自动共享，架构知识一人沉淀全员受益，多用户数据严格隔离互不干扰。支持多 worker 共享 Embedding 模型，N 个进程只需 1 份内存。新会话自动恢复上下文，语义搜索精准召回，Token 消耗直降 50%+。
+> **GatewayAIVectorMemory 是为团队打造的 AI 记忆中枢。** PostgreSQL + pgvector 存储，HTTP Memory Proxy 统一接入，团队踩坑经验自动共享，架构知识一人沉淀全员受益，多用户数据严格隔离互不干扰。支持多 worker 共享 Embedding 模型，N 个进程只需 1 份内存。新会话自动恢复上下文，语义搜索精准召回，Token 消耗直降 50%+。
 
 ## ✨ 核心特性
 
@@ -302,7 +302,7 @@ team-run memory-proxy \
 
 ## ⚡ 搭配 Steering 规则
 
-TeamAIVectorMemory 是存储层。通过 Steering 规则告诉 AI **何时、如何**调用这些工具。
+GatewayAIVectorMemory 是存储层。通过 Steering 规则告诉 AI **何时、如何**调用这些工具。
 
 | IDE | Steering 位置 | Hooks |
 |-----|--------------|-------|
@@ -318,7 +318,7 @@ TeamAIVectorMemory 是存储层。通过 Steering 规则告诉 AI **何时、如
 <summary>📋 Steering 规则示例</summary>
 
 ```markdown
-# TeamAIVectorMemory - 工作规则
+# GatewayAIVectorMemory - 工作规则
 
 ## 1. 新会话启动（按顺序执行）
 
